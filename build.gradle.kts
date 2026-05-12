@@ -1,5 +1,6 @@
 import com.autonomousapps.tasks.ProjectHealthTask
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
+import org.gradle.buildconfiguration.tasks.UpdateDaemonJvm
 
 /*
  * Copyright (C) 2001-2002  Zaval Creative Engineering Group (http://www.zaval.org)
@@ -29,6 +30,10 @@ tasks.check {
 	dependsOn(tasks.withType(ProjectHealthTask::class.java))
 }
 
+tasks.named<UpdateDaemonJvm>("updateDaemonJvm") {
+	languageVersion = JavaLanguageVersion.of(21)
+}
+
 application {
 	mainClass = "org.zaval.tools.i18n.translator.JrcEditor"
 	mainModule = "jrc.editor.main"
@@ -56,6 +61,16 @@ dependencies {
 
 	runtimeOnly(libs.bundles.slf4j.runtime)
 	runtimeOnly(libs.commons.beanutils)
+
+	testImplementation(platform(libs.junit.bom))
+	testImplementation(libs.junit.jupiter.api)
+	testRuntimeOnly(libs.junit.jupiter.engine)
+	testImplementation(libs.mockito.core)
+	testRuntimeOnly(libs.junit.platform.launcher)
+}
+
+tasks.test {
+	useJUnitPlatform()
 }
 
 sourceSets {
