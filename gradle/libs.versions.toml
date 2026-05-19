@@ -1,7 +1,7 @@
 [versions]
 commons-configuration = "2.14.0"
 commons-beanutils = "1.11.0"
-slf4j = "2.0.17"
+slf4j = "2.0.18"
 
 [libraries]
 commons-configuration = { module = "org.apache.commons:commons-configuration2", version.ref = "commons-configuration" }
