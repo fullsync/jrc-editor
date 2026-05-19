@@ -14,7 +14,7 @@ slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
 slf4j-runtime = ["jcl-over-slf4j", "slf4j-simple"]
 
 [plugins]
-spotless = { id = "com.diffplug.spotless", version = "8.4.0" }
+spotless = { id = "com.diffplug.spotless", version = "8.5.1" }
 javacc = { id = "ca.coglinc2.javacc", version = "3.0.0" }
 sonarqube = { id = "org.sonarqube", version = "7.3.0.8198" }
 versions = { id = "com.github.ben-manes.versions", version = "0.54.0" }
