@@ -108,9 +108,9 @@ class SrcGenerator {
 	}
 
 	private String baseName(String fn) {
-		int ind = fn.lastIndexOf('/');
-		fn = ind >= 0 ? fn.substring(ind + 1) : fn;
-		ind = fn.lastIndexOf('.');
-		return ind >= 0 ? fn.substring(0, ind) : fn;
+		int sep = Math.max(fn.lastIndexOf('/'), fn.lastIndexOf('\\'));
+		fn = sep >= 0 ? fn.substring(sep + 1) : fn;
+		int dot = fn.lastIndexOf('.');
+		return dot >= 0 ? fn.substring(0, dot) : fn;
 	}
 }
