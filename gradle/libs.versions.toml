@@ -1,5 +1,5 @@
 [versions]
-commons-configuration = "2.15.0"
+commons-configuration = "2.15.1"
 commons-beanutils = "1.11.0"
 slf4j = "2.0.18"
 
