@@ -2,6 +2,8 @@
 commons-configuration = "2.15.1"
 commons-beanutils = "1.11.0"
 slf4j = "2.0.18"
+junit-bom = "5.14.4"
+mockito = "5.23.0"
 
 [libraries]
 commons-configuration = { module = "org.apache.commons:commons-configuration2", version.ref = "commons-configuration" }
@@ -9,6 +11,11 @@ commons-beanutils = { module = "commons-beanutils:commons-beanutils", version.re
 slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
 jcl-over-slf4j = { module = "org.slf4j:jcl-over-slf4j", version.ref = "slf4j" }
 slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit-bom" }
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 
 [bundles]
 slf4j-runtime = ["jcl-over-slf4j", "slf4j-simple"]
